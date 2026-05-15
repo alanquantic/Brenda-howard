@@ -1,0 +1,56 @@
+.cursos {
+  padding: 88px 0 98px;
+  background: var(--color-soft);
+}
+
+.cursos__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 34px;
+}
+
+.curso-card {
+  overflow: hidden;
+  background: var(--color-white);
+  box-shadow: var(--shadow-card);
+}
+
+.curso-card__img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.curso-card__body {
+  padding: 28px;
+}
+
+.curso-card__tag {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--color-accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.curso-card__title {
+  margin: 0 0 14px;
+  color: var(--color-ink);
+  font-size: 1.45rem;
+  line-height: 1.25;
+}
+
+.curso-card__desc {
+  min-height: 86px;
+  margin: 0 0 22px;
+}
+
+@media (max-width: 820px) {
+  .cursos__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .curso-card__desc {
+    min-height: 0;
+  }
+}

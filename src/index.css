@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+:root {
+  --color-primary: #154856;
+  --color-accent: #65a5b5;
+  --color-lime: #d2d723;
+  --color-ink: #0f172a;
+  --color-text: #454f5e;
+  --color-muted: #6b7280;
+  --color-soft: #f5f8f9;
+  --color-white: #ffffff;
+  --shadow-card: 0 18px 45px rgba(15, 23, 42, 0.09);
+  --container-width: 1180px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--color-text);
+  background: var(--color-white);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: min(var(--container-width), calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.section-title {
+  margin: 0 0 44px;
+  color: var(--color-ink);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.section-title--left {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 15px 30px;
+  border: 0;
+  border-radius: 5px;
+  background: var(--color-accent);
+  color: var(--color-white);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1;
+  transition: transform 180ms ease, background 180ms ease, color 180ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  background: var(--color-primary);
+}
+
+.btn-outline {
+  border: 1px solid rgba(255, 255, 255, 0.78);
+  background: transparent;
+  color: var(--color-white);
+}
+
+.btn-outline:hover {
+  background: var(--color-white);
+  color: var(--color-ink);
+}
+
+.reveal,
+.reveal-left,
+.reveal-right {
+  opacity: 1;
+  transform: none;
+}
+
+@media (max-width: 760px) {
+  .container {
+    width: min(100% - 28px, var(--container-width));
+  }
+
+  .section-title {
+    margin-bottom: 30px;
+  }
+}
