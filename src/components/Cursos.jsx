@@ -3,11 +3,12 @@ import './Cursos.css'
 
 const cursos = [
   {
-    img: '/images/curso-banner.png',
-    title: 'Planeando mi 2025',
-    desc: 'En este curso aprenderás estrategias para mejorar y alcanzar tus metas en este 2025.',
-    link: 'https://learning.becomehigherhuman.com/products/courses/Mi2025',
-    price: 'Gratis',
+    img: '/images/curso-punto-de-quiebre.png',
+    imageClass: 'curso-card__img--full',
+    title: 'Punto de quiebre',
+    desc: 'Lidera tu próximo nivel. Masterclass para almas líderes y emprendedoras. 13 de octubre de 2026, 09:00 h (México).',
+    link: 'https://learning.becomehigherhuman.com/products/courses/punto-de-quiebre-oct',
+    price: 'Masterclass',
   },
   {
     img: '/images/curso-nolimits.webp',
@@ -49,7 +50,7 @@ export default function Cursos() {
               ref={(el) => (cardsRef.current[i] = el)}
               style={{ transitionDelay: `${i * 0.2}s` }}
             >
-              <img src={curso.img} alt={curso.title} className="curso-card__img" loading="lazy" />
+              <img src={curso.img} alt={curso.title} className={`curso-card__img ${curso.imageClass || ''}`} loading="lazy" />
               <div className="curso-card__body">
                 <span className="curso-card__tag">{curso.price}</span>
                 <h3 className="curso-card__title">{curso.title}</h3>
