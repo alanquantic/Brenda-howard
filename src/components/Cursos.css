@@ -25,6 +25,11 @@
   padding: 28px;
 }
 
+.curso-card__img--full {
+  object-fit: contain;
+  background: #85234e;
+}
+
 .curso-card__tag {
   display: block;
   margin-bottom: 12px;
