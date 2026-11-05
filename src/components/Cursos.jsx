@@ -3,12 +3,13 @@ import './Cursos.css'
 
 const cursos = [
   {
-    img: '/images/curso-punto-de-quiebre.png',
+    img: '/images/curso-rompe-tu-guion.jpg',
     imageClass: 'curso-card__img--full',
-    title: 'Punto de quiebre',
-    desc: 'Lidera tu próximo nivel. Masterclass para almas líderes y emprendedoras. 13 de octubre de 2026, 09:00 h (México).',
-    link: 'https://learning.becomehigherhuman.com/products/courses/punto-de-quiebre-oct',
-    price: 'Masterclass',
+    title: 'Rompe tu Guion',
+    desc: 'Un paquete de 3 clases para reescribir tu historia: “Ya no tengo edad… ¿Y si sí?”, “El síndrome de la buena persona” y “Punto de quiebre”.',
+    link: 'https://learning.becomehigherhuman.com/bundles/rompe-tu-guion',
+    price: '3 clases · $850',
+    cta: 'Ver paquete',
   },
   {
     img: '/images/curso-nolimits.webp',
@@ -61,7 +62,7 @@ export default function Cursos() {
                   rel="noopener noreferrer"
                   className="btn btn-primary curso-card__btn"
                 >
-                  Ver curso
+                  {curso.cta || 'Ver curso'}
                 </a>
               </div>
             </div>
